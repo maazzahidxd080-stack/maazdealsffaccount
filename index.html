@@ -1,215 +1,139 @@
-<script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyD8U47oOWvddcLNxEjxXquYAqYAsTScu1I",
-  authDomain: "maaz-deals-ff-account.firebaseapp.com",
-  projectId: "maaz-deals-ff-account",
-  storageBucket: "maaz-deals-ff-account.firebasestorage.app",
-  messagingSenderId: "210606676987",
-  appId: "1:210606676987:web:d981d8f81bff27f905495e"
-};
-
-const app = initializeApp(firebaseConfig);
-
-console.log("Firebase Connected Successfully");
-</script>
-
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maaz Deals Free Fire Account</title><style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+<title>Maaz Deals FF Account - Buy & Sell Free Fire Accounts</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { 
+  background:#0a0a0a; 
+  color:#fff; 
+  font-family:'Orbitron', sans-serif; 
 }
 
-body{
-background:#0b0b0b;
-color:white;
+header {
+  background:#000;
+  border-bottom:3px solid gold;
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
 }
 
-header{
-background:linear-gradient(45deg,#000,#d4af37);
-padding:20px;
-text-align:center;
+.logo h1 {
+  color:gold;
+  font-size:20px;
+  text-shadow:0 0 10px gold, 0 0 20px red;
+  display:inline;
+}
+.fire, .crown { font-size:26px; }
+
+nav a {
+  color:gold;
+  margin:0 8px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+}
+nav a:hover { color:red; text-shadow:0 0 5px red; }
+
+.hero {
+  text-align:center;
+  padding:60px 20px;
+  background:linear-gradient(135deg, #000, #1a1a1a);
+  border-bottom:3px solid gold;
+}
+.hero h2 { font-size:28px; color:gold; margin-bottom:10px; }
+.hero p { color:#ccc; margin-bottom:20px; font-size:14px; }
+
+.btn-group button {
+  background:gold;
+  color:#000;
+  border:none;
+  padding:12px 20px;
+  margin:5px;
+  font-weight:900;
+  cursor:pointer;
+  border-radius:5px;
+  box-shadow:0 0 15px gold;
+  font-family:'Orbitron';
+}
+.btn-group button:hover { background:red; color:gold; }
+
+section { padding:40px 20px; }
+h3 { color:gold; text-align:center; margin-bottom:20px; font-size:24px; }
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+  gap:20px;
+  max-width:1200px;
+  margin:auto;
+}
+.card {
+  background:#111;
+  border:2px solid gold;
+  border-radius:10px;
+  padding:15px;
+  text-align:center;
+  box-shadow:0 0 10px gold;
+}
+.card img { width:100%; height:180px; object-fit:cover; border-radius:5px; }
+.card h4 { color:gold; margin:10px 0; }
+.card p { margin:5px 0; color:#ccc; }
+.card button {
+  background:gold; color:#000; border:none; padding:8px 15px; cursor:pointer; border-radius:5px; margin-top:10px; font-weight:700;
 }
 
-.logo{
-font-size:35px;
-font-weight:bold;
-color:#fff;
-text-shadow:0 0 10px gold;
+.sell-form {
+  max-width:500px;
+  margin:auto;
+  background:#111;
+  padding:30px;
+  border:2px solid gold;
+  border-radius:10px;
+}
+.sell-form input {
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  background:#000;
+  border:1px solid gold;
+  color:#fff;
+  border-radius:5px;
+  font-family:'Orbitron';
+}
+.sell-form button {
+  width:100%;
+  padding:12px;
+  background:gold;
+  color:#000;
+  border:none;
+  font-weight:900;
+  cursor:pointer;
+  border-radius:5px;
+  margin-top:10px;
 }
 
-nav{
-margin-top:15px;
+footer {
+  background:#000;
+  border-top:3px solid gold;
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
+  color:gold;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-margin:10px;
-font-weight:bold;
-}
+.hidden { display:none; }
+</style>
+</head>
+<body>
 
-.hero{
-padding:60px 20px;
-text-align:center;
-}
-
-.hero h1{
-font-size:40px;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:20px;
-color:#ddd;
-}
-
-.btn{
-display:inline-block;
-padding:12px 25px;
-margin:10px;
-background:#d4af37;
-color:black;
-text-decoration:none;
-font-weight:bold;
-border-radius:8px;
-}
-
-.section{
-padding:40px 20px;
-}
-
-.section-title{
-text-align:center;
-font-size:32px;
-margin-bottom:30px;
-color:#d4af37;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-}
-
-.card{
-background:#1a1a1a;
-padding:20px;
-border-radius:12px;
-border:1px solid #333;
-}
-
-.card img{
-width:100%;
-border-radius:10px;
-margin-bottom:15px;
-}
-
-.price{
-color:gold;
-font-size:22px;
-font-weight:bold;
-}
-
-.whatsapp{
-display:block;
-text-align:center;
-background:#25D366;
-padding:10px;
-margin-top:15px;
-color:white;
-text-decoration:none;
-border-radius:6px;
-}
-
-.dealer{
-background:#151515;
-padding:20px;
-border-radius:10px;
-margin-bottom:15px;
-}
-
-.badge{
-background:green;
-padding:5px 10px;
-border-radius:5px;
-font-size:12px;
-}
-
-footer{
-background:black;
-padding:20px;
-text-align:center;
-margin-top:40px;
-}
-</style></head><body><header>
-<div class="logo">👑🔥 MAAZ DEALS FF ACCOUNT 🔥👑</div><nav>
-<a href="#">Home</a>
-<a href="#">Accounts</a>
-<a href="#">Sold Proofs</a>
-<a href="#">Dealers</a>
-<a href="#">Inbox</a>
-<a href="#">Login/Register</a>
-</nav>
-</header><section class="hero">
-<h1>Buy & Sell Free Fire Accounts Safely</h1>
-<p>Trusted Marketplace For Premium Free Fire Accounts</p><a href="#" class="btn">Buy Account</a>
-<a href="#" class="btn">Sell Account</a>
-
-</section><section class="section">
-<h2 class="section-title">Latest Accounts</h2><div class="cards"><div class="card">
-<img src="https://via.placeholder.com/400x250" alt="">
-<h3>FF Account #1</h3>
-<p>Level: 80</p>
-<p>Rare Bundles + Evo Gun</p>
-<p>Seller: Maaz Gaming</p>
-<p class="price">7000 PKR</p>
-<a class="whatsapp" href="https://wa.me/923441923779">Message Seller</a>
-</div><div class="card">
-<img src="https://via.placeholder.com/400x250" alt="">
-<h3>FF Account #2</h3>
-<p>Level: 70</p>
-<p>Elite Pass Included</p>
-<p>Seller: Ali FF</p>
-<p class="price">5000 PKR</p>
-<a class="whatsapp" href="https://wa.me/923001234567">Message Seller</a>
-</div><div class="card">
-<img src="https://via.placeholder.com/400x250" alt="">
-<h3>FF Account #3</h3>
-<p>Level: 65</p>
-<p>Premium Collection</p>
-<p>Seller: Shah FF</p>
-<p class="price">3500 PKR</p>
-<a class="whatsapp" href="https://wa.me/923001234567">Message Seller</a>
-</div></div>
-</section><section class="section">
-<h2 class="section-title">Sold Proofs</h2><div class="cards"><div class="card">
-<img src="https://via.placeholder.com/400x250" alt="">
-<p>Sold Date: 10 July 2025</p>
-<p>Dealer: Maaz Gaming</p>
-</div><div class="card">
-<img src="https://via.placeholder.com/400x250" alt="">
-<p>Sold Date: 15 July 2025</p>
-<p>Dealer: Ali FF</p>
-</div></div>
-</section><section class="section">
-<h2 class="section-title">Trusted Dealers</h2><div class="dealer">
-<h3>Maaz Gaming <span class="badge">Verified</span></h3>
-<p>Total Sales: 250+</p>
-<p>Rating: ⭐⭐⭐⭐⭐</p>
-</div><div class="dealer">
-<h3>Ali FF Store <span class="badge">Verified</span></h3>
-<p>Total Sales: 150+</p>
-<p>Rating: ⭐⭐⭐⭐⭐</p>
-</div>
-</section><footer>
-© 2025 Maaz Deals Free Fire Account
-</footer></body>
-</html>
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <span class="fire
